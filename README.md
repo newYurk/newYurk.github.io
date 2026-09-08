@@ -1,7 +1,7 @@
 # Темари
 
-**Сайт:** https://newyurk.github.io/temari/
+Нить на сфере. Намотка вокруг или спиралью от булавки-начала.
 
-Корень тоже работает: https://newyurk.github.io/
+**Сайт:** https://newyurk.github.io/temari/
 
 Исходники: https://github.com/newYurk/temari
