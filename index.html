@@ -1,34 +1,93 @@
 <!DOCTYPE html>
-<html lang="ru" class="antialiased">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Темари</title>
-    <meta
-      name="description"
-      content="Темари — нить на сфере. Сначала намотка, потом кагари."
-    />
+    <title>newYurk</title>
+    <meta name="description" content="Темари, Ролльня, Ротишница." />
     <meta name="theme-color" content="#ece8e1" />
-    <meta property="og:title" content="Темари" />
-    <meta property="og:description" content="Нить на сфере. Сначала намотка, потом кагари." />
-    <meta property="og:image" content="https://newyurk.github.io/temari/og.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:type" content="x:game" />
-    <meta property="x:game:image" content="https://newyurk.github.io/temari/x-banner.jpg" />
-    <meta property="x:game:image:width" content="1200" />
-    <meta property="x:game:image:height" content="264" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500&display=swap"
     />
-    <script type="module" crossorigin src="./assets/pages-BY9lLOEi.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/pages-DDhnWYhc.css">
+    <style>
+      :root {
+        --ink: #0c0b09;
+        --linen: #ece8e1;
+        --stone: #8a847c;
+        --line: color-mix(in oklab, #0c0b09 12%, transparent);
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        min-height: 100%;
+        background: var(--linen);
+        color: var(--ink);
+        font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem 1.4rem 4rem;
+      }
+      main { max-width: 26rem; margin: 0 auto; width: 100%; }
+      .kicker {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--stone);
+        margin: 0 0 0.6rem;
+      }
+      h1 {
+        font-family: "Cormorant Garamond", "Times New Roman", serif;
+        font-weight: 500;
+        font-size: clamp(2.4rem, 8vw, 3.2rem);
+        letter-spacing: -0.03em;
+        margin: 0 0 2.2rem;
+      }
+      a.game {
+        display: block;
+        padding: 1.05rem 0;
+        border-top: 1px solid var(--line);
+        color: inherit;
+        text-decoration: none;
+      }
+      a.game:last-of-type { border-bottom: 1px solid var(--line); }
+      a.game strong {
+        display: block;
+        font-family: "Cormorant Garamond", "Times New Roman", serif;
+        font-size: 1.7rem;
+        font-weight: 500;
+      }
+      a.game span {
+        display: block;
+        margin-top: 0.2rem;
+        font-size: 0.88rem;
+        color: var(--stone);
+      }
+    </style>
   </head>
-  <body class="font-sans bg-linen text-ink">
-    <div id="root"></div>
+  <body>
+    <main>
+      <p class="kicker">игры</p>
+      <h1>newYurk</h1>
+      <a class="game" href="./temari/">
+        <strong>Темари</strong>
+        <span>нить на сфере</span>
+      </a>
+      <a class="game" href="./rollery/">
+        <strong>Ролльня</strong>
+        <span>лист → спираль → срез</span>
+      </a>
+      <a class="game" href="./roti-stand/">
+        <strong>Ротишница</strong>
+        <span>стойка роти</span>
+      </a>
+    </main>
   </body>
 </html>

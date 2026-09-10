@@ -1,7 +1,5 @@
-# Темари
+# newYurk
 
-Нить на сфере. Намотка вокруг или спиралью от булавки-начала.
-
-**Сайт:** https://newyurk.github.io/temari/
-
-Исходники: https://github.com/newYurk/temari
+- [Темари](https://newyurk.github.io/temari/)
+- [Ролльня](https://newyurk.github.io/rollery/)
+- [Ротишница](https://newyurk.github.io/roti-stand/)
