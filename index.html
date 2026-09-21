@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ветки · newYurk</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#ece8e1" />
+    <style>
+      html, body { margin: 0; background: #ece8e1; color: #0c0b09; }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <main style="max-width: 30rem; margin: 0 auto; padding: 4rem 1rem; font-family: sans-serif; line-height: 1.5">
+        <p><a href="/branches/">Ветки в работе</a></p>
+        <p><a href="https://newyurk.github.io/temari/">Темари · main</a></p>
+        <p><a href="https://newyurk.github.io/rollery/">Ролльня · main</a></p>
+        <p><a href="https://newyurk.github.io/roti-stand/">Ротишница · main</a></p>
+      </main>
+    </noscript>
+    <script type="module">
+      // The listing is built by newYurk/branches and published at /branches/home.html.
+      // Until that file exists, /fallback.html is today's listing with the same main links.
+      function activate(html) {
+        const doc = new DOMParser().parseFromString(html, 'text/html')
+        document.replaceChild(document.adoptNode(doc.documentElement), document.documentElement)
+        for (const old of [...document.scripts]) {
+          const fresh = document.createElement('script')
+          for (const attr of old.attributes) fresh.setAttribute(attr.name, attr.value)
+          fresh.textContent = old.textContent
+          old.replaceWith(fresh)
+        }
+      }
+
+      const deadline = new AbortController()
+      const timer = setTimeout(() => deadline.abort(), 8000)
+      let html = null
+      try {
+        const res = await fetch('/branches/home.html?v=' + Date.now(), { cache: 'no-store', signal: deadline.signal })
+        if (res.ok) {
+          const text = await res.text()
+          if (text.includes('data-home="1"')) html = text
+        }
+      } catch {}
+      clearTimeout(timer)
+      if (!html) {
+        const res = await fetch('/fallback.html', { cache: 'no-store' })
+        if (!res.ok) throw new Error('no listing')
+        html = await res.text()
+      }
+      activate(html)
+    </script>
+  </body>
+</html>
