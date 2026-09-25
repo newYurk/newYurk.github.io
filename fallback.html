@@ -82,12 +82,29 @@
       .note { display: inline-block; margin-right: 0.8em; }
       .note.bad, .live.bad, .tagline.bad { color: var(--rust); }
       .live.fresh { color: var(--moss); }
-      .quiet .name, .quiet .subject { color: var(--stone); }
       .empty { margin-top: 2.2rem; color: var(--stone); font-size: 0.9rem; }
-      .idle { margin-top: 1.2rem; }
-      .idle h2 { font-size: 1.35rem; color: var(--stone); }
-      .idle .tagline { margin-bottom: 0; }
+      .main-tip {
+        margin: 0.15rem 0 0.75rem;
+        font-size: 0.78rem;
+        color: var(--stone);
+        line-height: 1.5;
+      }
+      .main-tip .label {
+        font-family: "IBM Plex Mono", ui-monospace, monospace;
+        color: var(--ink);
+        margin-right: 0.55em;
+      }
+      .main-tip .subject-inline {
+        margin-right: 0.55em;
+        color: var(--ink);
+      }
+      .main-tip a { text-decoration: none; }
+      .main-tip code { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+      .main-tip .live { display: block; margin: 0.1rem 0 0; }
+      /* In each game only the newest entry (main or a branch, by last commit) stays dark. */
+      .older .name, .older .subject, .older .label, .older .subject-inline { color: var(--stone); }
       footer { margin-top: 2.6rem; font-size: 0.78rem; color: var(--stone); line-height: 1.6; }
+      #building a { color: inherit; }
     </style>
   </head>
   <body>
@@ -101,43 +118,85 @@
     <section class="project" data-repo="temari" data-default="main">
       <h2><span>Темари</span> <a class="main" href="https://newyurk.github.io/temari/">main ↗</a></h2>
       <p class="tagline">нить на сфере</p>
-      <ul>
-      <li class="branch" data-repo="temari" data-branch="codex/temari-next" data-sha="0da0b8ac94ddfbb72772a0ec907d10687bc7ddec" data-path="temari/codex/temari-next">
-        <a class="name" href="./temari/codex/temari-next/">codex/temari-next</a>
-        <p class="subject">feat: consolidate workshop controls for desktop and mobile</p>
-        <p class="meta"><time datetime="2026-09-21T20:50:11Z">2026-09-21 20:50</time><span class="dot">·</span>+166 к main<span class="dot">·</span>отстаёт на 2<span class="dot">·</span><a href="https://github.com/newYurk/temari/pull/92">PR #92 · черновик</a><span class="dot">·</span><a href="https://github.com/newYurk/temari/tree/codex/temari-next"><code>0da0b8a</code></a></p>
-        <p class="more"><a href="./temari/codex/temari-next/">мастерская</a><a href="./temari/codex/temari-next/lab.html">лаборатория</a><a href="./temari/codex/temari-next/design.html">как устроено</a></p>
-        
+
+      <p class="main-tip" data-sha="5878fd17741f74c81229cf80469868c413a19273" data-at="2026-09-24T23:16:37Z">
+        <span class="label">main</span><span class="subject-inline">Record tested first-visit implementation snapshot</span><span class="when"><time datetime="2026-09-24T23:16:37Z">2026-09-24 23:16</time><span class="dot">·</span><a href="https://github.com/newYurk/temari/commit/5878fd17741f74c81229cf80469868c413a19273"><code>5878fd1</code></a></span>
+        <span class="live" hidden></span>
+      </p>      <ul>
+      <li class="branch older" data-repo="temari" data-branch="codex/temari-followup" data-sha="5878fd17741f74c81229cf80469868c413a19273" data-path="temari/codex/temari-followup" data-at="2026-09-24T23:16:37Z">
+        <a class="name" href="./temari/codex/temari-followup/">codex/temari-followup</a>
+        <p class="subject">Record tested first-visit implementation snapshot</p>
+        <p class="meta"><time datetime="2026-09-24T23:16:37Z">2026-09-24 23:16</time><span class="dot">·</span><a href="https://github.com/newYurk/temari/tree/codex/temari-followup"><code>5878fd1</code></a></p>
+        <p class="more"><a href="./temari/codex/temari-followup/">мастерская</a><a href="./temari/codex/temari-followup/lab.html">лаборатория</a><a href="./temari/codex/temari-followup/design.html">как устроено</a></p>
+        <p class="notes"><span class="note">совпадает с main</span></p>
         <p class="live" hidden></p>
       </li>
       </ul>
     </section>
 
-        <section class="project" data-repo="temari-sim" data-default="main">
+    <section class="project" data-repo="temari-sim" data-default="main">
       <h2><span>Темари-sim</span> <a class="main" href="https://newyurk.github.io/temari-sim/">main ↗</a></h2>
-      <p class="tagline">база знаний и параметрический симулятор</p>
-      <ul></ul>
+      <p class="tagline">других веток нет</p>
+
+      <p class="main-tip" data-sha="fef6b4e2a1aa309c94f8b654a47dfdcf02454449" data-at="2026-09-25T14:12:15Z">
+        <span class="label">main</span><span class="subject-inline">fix(6a.12–6a.16): λ&gt;0 Δ_n band, tube free-exit, tipCross/K16, V8 prefix δ</span><span class="when"><time datetime="2026-09-25T14:12:15Z">2026-09-25 14:12</time><span class="dot">·</span><a href="https://github.com/newYurk/temari-sim/commit/fef6b4e2a1aa309c94f8b654a47dfdcf02454449"><code>fef6b4e</code></a></span>
+        <span class="live" hidden></span>
+      </p>      <ul>
+      </ul>
     </section>
 
-<section class="project" data-repo="roti-stand" data-default="main">
+    <section class="project" data-repo="roti-stand" data-default="main">
       <h2><span>Ротишница</span> <a class="main" href="https://newyurk.github.io/roti-stand/">main ↗</a></h2>
       <p class="tagline">стойка роти</p>
-      <ul>
-      <li class="branch" data-repo="roti-stand" data-branch="codex/roti-continuation" data-sha="9f0731e90512588ea65802c27d58d8f6b56333fd" data-path="roti-stand/codex/roti-continuation">
+
+      <p class="main-tip older" data-sha="72def4672eee8fd9aecd944cf5cbff354d75ae1f" data-at="2026-09-23T21:52:08Z">
+        <span class="label">main</span><span class="subject-inline">Point STATE.md at north-star and v0 guest screen docs.</span><span class="when"><time datetime="2026-09-23T21:52:08Z">2026-09-23 21:52</time><span class="dot">·</span><a href="https://github.com/newYurk/roti-stand/commit/72def4672eee8fd9aecd944cf5cbff354d75ae1f"><code>72def46</code></a></span>
+        <span class="live" hidden></span>
+      </p>      <ul>
+      <li class="branch" data-repo="roti-stand" data-branch="codex/roti-continuation" data-sha="a33061a3bb8df5b26c88335d1f07c5b4db1dd80c" data-path="roti-stand/codex/roti-continuation" data-at="2026-09-24T14:13:19Z">
         <a class="name" href="./roti-stand/codex/roti-continuation/prototype/dough-closeup/">codex/roti-continuation</a>
-        <p class="subject">feat(stand): банан съезжает со складки, не режется</p>
-        <p class="meta"><time datetime="2026-09-21T05:10:59Z">2026-09-21 05:10</time><span class="dot">·</span>+204 к main<span class="dot">·</span><a href="https://github.com/newYurk/roti-stand/pull/96">PR #96 · черновик</a><span class="dot">·</span><a href="https://github.com/newYurk/roti-stand/tree/codex/roti-continuation"><code>9f0731e</code></a></p>
+        <p class="subject">docs(world): drop the leftover board views and graph wording</p>
+        <p class="meta"><time datetime="2026-09-24T14:13:19Z">2026-09-24 14:13</time><span class="dot">·</span>+207 к main<span class="dot">·</span>отстаёт на 2<span class="dot">·</span><a href="https://github.com/newYurk/roti-stand/pull/96">PR #96 · черновик</a><span class="dot">·</span><a href="https://github.com/newYurk/roti-stand/tree/codex/roti-continuation"><code>a33061a</code></a></p>
         <p class="more"><a href="./roti-stand/codex/roti-continuation/prototype/dough-closeup/">стенд теста</a><a href="./roti-stand/codex/roti-continuation/">прихожая</a><a href="./roti-stand/codex/roti-continuation/docs/overview.html">обзор</a></p>
         
         <p class="live" hidden></p>
       </li>
+      <li class="branch older" data-repo="roti-stand" data-branch="cursor/atmospheric-guest-hints-b51a" data-sha="689b4593a6babeba6d6ce56dc30c779c03e4696e" data-path="roti-stand/cursor/atmospheric-guest-hints-b51a" data-at="2026-09-23T01:57:49Z">
+        <a class="name" href="./roti-stand/cursor/atmospheric-guest-hints-b51a/prototype/dough-closeup/">cursor/atmospheric-guest-hints-b51a</a>
+        <p class="subject">docs(vault): развиваемые UI-идеи 1, 4, 5 из брейншторма</p>
+        <p class="meta"><time datetime="2026-09-23T01:57:49Z">2026-09-23 01:57</time><span class="dot">·</span>+208 к main<span class="dot">·</span>отстаёт на 2<span class="dot">·</span><a href="https://github.com/newYurk/roti-stand/pull/111">PR #111 · черновик</a><span class="dot">·</span><a href="https://github.com/newYurk/roti-stand/tree/cursor/atmospheric-guest-hints-b51a"><code>689b459</code></a></p>
+        <p class="more"><a href="./roti-stand/cursor/atmospheric-guest-hints-b51a/prototype/dough-closeup/">стенд теста</a><a href="./roti-stand/cursor/atmospheric-guest-hints-b51a/">прихожая</a><a href="./roti-stand/cursor/atmospheric-guest-hints-b51a/docs/overview.html">обзор</a></p>
+        
+        <p class="live" hidden></p>
+      </li>
+      <li class="branch older" data-repo="roti-stand" data-branch="cursor/setup-cloud-agent-environment-2413" data-sha="67e16bc0e861b93ab0608af644e3c8f4e14340f1" data-path="roti-stand/cursor/setup-cloud-agent-environment-2413" data-at="2026-09-22T21:59:43Z">
+        <a class="name" href="./roti-stand/cursor/setup-cloud-agent-environment-2413/prototype/dough-closeup/">cursor/setup-cloud-agent-environment-2413</a>
+        <p class="subject">Add Cloud Agent environment for the static Roti Stand site</p>
+        <p class="meta"><time datetime="2026-09-22T21:59:43Z">2026-09-22 21:59</time><span class="dot">·</span>+1 к main<span class="dot">·</span>отстаёт на 2<span class="dot">·</span><a href="https://github.com/newYurk/roti-stand/pull/112">PR #112 · черновик</a><span class="dot">·</span><a href="https://github.com/newYurk/roti-stand/tree/cursor/setup-cloud-agent-environment-2413"><code>67e16bc</code></a></p>
+        <p class="more"><a href="./roti-stand/cursor/setup-cloud-agent-environment-2413/prototype/dough-closeup/">стенд теста</a><a href="./roti-stand/cursor/setup-cloud-agent-environment-2413/">прихожая</a><a href="./roti-stand/cursor/setup-cloud-agent-environment-2413/docs/overview.html">обзор</a></p>
+        
+        <p class="live" hidden></p>
+      </li>
       </ul>
     </section>
-<section class="project" data-repo="rollery" data-default="main">
+
+    <section class="project" data-repo="rollery" data-default="main">
       <h2><span>Ролльня</span> <a class="main" href="https://newyurk.github.io/rollery/">main ↗</a></h2>
       <p class="tagline">лист → спираль → срез</p>
-      <ul>
-      <li class="branch" data-repo="rollery" data-branch="codex/puzzle-board" data-sha="00d11c04dc913f2e87896bb4dcfeeca9a2aed8eb" data-path="rollery/codex/puzzle-board">
+
+      <p class="main-tip older" data-sha="9473aec188d5a83fde4a39e1f91337464518800c" data-at="2026-09-17T14:49:18Z">
+        <span class="label">main</span><span class="subject-inline">Rebuild branch previews on pull request events too [skip ci]</span><span class="when"><time datetime="2026-09-17T14:49:18Z">2026-09-17 14:49</time><span class="dot">·</span><a href="https://github.com/newYurk/rollery/commit/9473aec188d5a83fde4a39e1f91337464518800c"><code>9473aec</code></a></span>
+        <span class="live" hidden></span>
+      </p>      <ul>
+      <li class="branch" data-repo="rollery" data-branch="codex/rollery-next" data-sha="69add6e41087668c9dac351f6a41b233fc5e0b4e" data-path="rollery/codex/rollery-next" data-at="2026-09-24T13:49:13Z">
+        <a class="name" href="./rollery/codex/rollery-next/play/">codex/rollery-next</a>
+        <p class="subject">vault: remove the Obsidian vault and its generator, the pitch moves to docs/pitch.md</p>
+        <p class="meta"><time datetime="2026-09-24T13:49:13Z">2026-09-24 13:49</time><span class="dot">·</span>+295 к main<span class="dot">·</span><a href="https://github.com/newYurk/rollery/pull/254">PR #254 · черновик</a><span class="dot">·</span><a href="https://github.com/newYurk/rollery/tree/codex/rollery-next"><code>69add6e</code></a></p>
+        <p class="more"><a href="./rollery/codex/rollery-next/play/">играть</a><a href="./rollery/codex/rollery-next/play/core-v2/">срез V2</a><a href="./rollery/codex/rollery-next/">прихожая</a><a href="./rollery/codex/rollery-next/docs/">документы</a></p>
+        
+        <p class="live" hidden></p>
+      </li>
+      <li class="branch older" data-repo="rollery" data-branch="codex/puzzle-board" data-sha="00d11c04dc913f2e87896bb4dcfeeca9a2aed8eb" data-path="rollery/codex/puzzle-board" data-at="2026-09-20T21:38:30Z">
         <a class="name" href="./rollery/codex/puzzle-board/play/">codex/puzzle-board</a>
         <p class="subject">puzzle loop: lesson, match, roll, then puzzle 02</p>
         <p class="meta"><time datetime="2026-09-20T21:38:30Z">2026-09-20 21:38</time><span class="dot">·</span>+325 к main<span class="dot">·</span><a href="https://github.com/newYurk/rollery/tree/codex/puzzle-board"><code>00d11c0</code></a></p>
@@ -145,27 +204,20 @@
         
         <p class="live" hidden></p>
       </li>
-      <li class="branch" data-repo="rollery" data-branch="codex/rollery-next" data-sha="6c8dce2d066ec6d9811701626a393a6dc9268805" data-path="rollery/codex/rollery-next">
-        <a class="name" href="./rollery/codex/rollery-next/play/">codex/rollery-next</a>
-        <p class="subject">puzzle: show where the stick sits in the cut and on the sheet</p>
-        <p class="meta"><time datetime="2026-09-20T03:44:45Z">2026-09-20 03:44</time><span class="dot">·</span>+294 к main<span class="dot">·</span><a href="https://github.com/newYurk/rollery/pull/254">PR #254 · черновик</a><span class="dot">·</span><a href="https://github.com/newYurk/rollery/tree/codex/rollery-next"><code>6c8dce2</code></a></p>
-        <p class="more"><a href="./rollery/codex/rollery-next/play/">играть</a><a href="./rollery/codex/rollery-next/play/core-v2/">срез V2</a><a href="./rollery/codex/rollery-next/">прихожая</a><a href="./rollery/codex/rollery-next/docs/">документы</a></p>
-        
-        <p class="live" hidden></p>
-      </li>
       </ul>
     </section>
-
-          <footer>
-        Собрано <time id="built" datetime="2026-09-21T20:50:52.764Z">2026-09-21 20:50 UTC</time>.
-        Превью обновляется через пару минут после push; если отстаёт — <a href="https://github.com/newYurk/branches/actions/workflows/publish.yml">обновить сейчас</a>.<br />
+      <footer>
+        Собрано <time id="built" datetime="2026-09-25T14:16:42.959Z">2026-09-25 14:16 UTC</time>.
+        Превью обновляется через пару минут после push; если отстаёт — <a href="https://github.com/newYurk/branches/actions/workflows/publish.yml">обновить сейчас</a>.
+        <span id="building"><br />Проверяю, что сейчас собирается…</span><br />
         Ветки, которые не запушены на GitHub, здесь не видны.
         <span id="stale" class="note bad" hidden><br />Новые коммиты ждут дольше 20 минут — похоже, автопроверка стоит. <a href="https://github.com/newYurk/branches/actions/workflows/publish.yml">Запустить publish вручную</a>.</span>
       </footer>
     </main>
     <script type="module">
       const OWNER = "newYurk"
-      const BUILT_RUN = "35653561649"
+      const SITE = "branches"
+      const BUILT_RUN = "36146358041"
 
       // Pages lets the browser keep this page for 10 minutes; if a newer build is out, load it.
       // A new query string skips the browser's copy. Once per build, so a slow CDN cannot loop us.
@@ -204,11 +256,61 @@
       }
       for (const t of document.querySelectorAll('time')) t.textContent = ago(t.dateTime)
 
+      const escText = (s) =>
+        String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
+
+      // Live Actions status for the listing builder (publish.yml).
+      const buildingEl = document.getElementById('building')
+      async function refreshBuilding() {
+        if (!buildingEl) return
+        try {
+          const [running, queued] = await Promise.all([
+            api(`/repos/${OWNER}/${SITE}/actions/runs?status=in_progress&per_page=10`),
+            api(`/repos/${OWNER}/${SITE}/actions/runs?status=queued&per_page=10`),
+          ])
+          const runs = [...(running.workflow_runs ?? []), ...(queued.workflow_runs ?? [])].filter(
+            (r) => (r.path && r.path.includes('publish.yml')) || r.name === 'publish',
+          )
+          if (!runs.length) {
+            buildingEl.innerHTML = '<br />Сейчас ничего не собирается.'
+            return
+          }
+          const r = runs[0]
+          const label = escText(r.display_title || r.name || 'publish')
+          const when = r.updated_at || r.created_at
+          const agoBit = when ? ` · ${ago(when)}` : ''
+          buildingEl.innerHTML = `<br />Сейчас собирается: <a href="${escText(r.html_url)}">${label}</a>${agoBit}.`
+        } catch {
+          buildingEl.innerHTML = '<br />Статус сборки сейчас не прочитать.'
+        }
+      }
+      refreshBuilding()
+      setInterval(refreshBuilding, 60_000)
+
       // Previews keep their saves under "branch:<repo>/<branch>:" (see tools/inject.mjs).
       // Once a branch is gone from GitHub its saves are dead weight in the shared 5 MB.
       const alive = new Set([...document.querySelectorAll('.branch')].map((li) => li.dataset.path))
       const checked = new Set()
       const lagging = []
+
+      // Last commit time of a head this build has not seen: the same field tools/plan.mjs reads.
+      const committedAt = (repo, sha) =>
+        api(`/repos/${OWNER}/${repo}/commits/${sha}`).then((c) => c.commit.committer.date, () => null)
+      function newestOf(times) {
+  let best = 0
+  let bestAt = -Infinity
+  times.forEach((time, i) => {
+    const at = Date.parse(time ?? '')
+    if (at > bestAt) (best = i), (bestAt = at)
+  })
+  return best
+}
+      function markNewest(section) {
+        const entries = [...section.querySelectorAll('.main-tip, .branch')]
+        const newest = newestOf(entries.map((el) => el.dataset.at))
+        entries.forEach((el, i) => el.classList.toggle('older', i !== newest))
+        return entries.length
+      }
 
       // Built pages lag behind pushes by a few minutes; say so instead of pretending.
       for (const section of document.querySelectorAll('.project')) {
@@ -225,24 +327,48 @@
         }
         checked.add(repo)
         for (const name of heads.keys()) alive.add(await pathFor(repo, name))
+        // A push since this build moves an entry's time to its new commit, and the dark entry may move with it.
+        const tip = section.querySelector('.main-tip')
+        const mainSha = heads.get(section.dataset.default)
+        const mainMoved = Boolean(tip && mainSha && mainSha !== tip.dataset.sha)
+        const mainAt = mainMoved ? await committedAt(repo, mainSha) : null
+        if (mainAt) tip.dataset.at = mainAt
         const shown = new Set()
         for (const li of section.querySelectorAll('.branch')) {
           shown.add(li.dataset.branch)
           const live = li.querySelector('.live')
           const sha = heads.get(li.dataset.branch)
-          if (!sha) Object.assign(live, { hidden: false, className: 'live bad', textContent: 'ветку уже удалили' })
-          else if (sha !== li.dataset.sha && lagging.push([repo, li.dataset.branch]))
+          if (!sha) {
+            // A deleted branch has no last commit any more, so it is never the newest entry.
+            delete li.dataset.at
+            Object.assign(live, { hidden: false, className: 'live bad', textContent: 'ветку уже удалили' })
+          } else if (sha !== li.dataset.sha) {
+            lagging.push([repo, li.dataset.branch])
             Object.assign(live, { hidden: false, className: 'live fresh', textContent: `есть новые коммиты (${sha.slice(0, 7)}) — превью догонит через несколько минут` })
+            const at = await committedAt(repo, sha)
+            if (at) li.dataset.at = at
+          }
         }
-        for (const name of heads.keys()) {
+        for (const [name, sha] of heads) {
           if (name === section.dataset.default || shown.has(name)) continue
           const li = document.createElement('li')
-          li.className = 'branch quiet'
+          li.className = 'branch'
           li.innerHTML = '<span class="name"></span><p class="live fresh">новая ветка — превью готовится</p>'
           li.querySelector('.name').textContent = name
+          const at = await committedAt(repo, sha)
+          if (at) li.dataset.at = at
           section.querySelector('ul').append(li)
           lagging.push([repo, name])
         }
+        // A moved main gets a plain note, never a promise and never the stuck warning. Every publish run
+        // re-reads all the games, but runs start only from branch-preview.yml in a game (push, branch
+        // deletion, pull request), a push here, a manual run, publish.yml's own retry, or the scheduled
+        // watch.yml that GitHub runs hours apart, so the main of a game without branch-preview.yml
+        // (temari-sim) can wait hours for the listing. The note shows whenever main moved and the game has
+        // more than one entry, dark or grey; it explains a dark main whose line still shows an older commit.
+        // A game whose only entry is main needs none.
+        if (markNewest(section) > 1 && mainMoved)
+          Object.assign(tip.querySelector('.live'), { hidden: false, className: 'live', textContent: `есть новые коммиты (${mainSha.slice(0, 7)}${mainAt ? ', ' + ago(mainAt) : ''})` })
       }
 
       // The watcher is stuck if a push is older than 20 minutes and still not built.
